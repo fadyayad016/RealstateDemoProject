@@ -1,0 +1,326 @@
+/* global componant */
+#body {
+    transition: background-color 0.3s;
+}
+.title {
+    text-align: center;
+    font-size: 40px;
+    border: #ddd;
+    box-shadow: 0 0 5px #ddd;
+    width: 500px;
+    margin: 0 auto 40px;
+    padding: 10px;
+    transition: 0.3s;
+    border-radius: 10px;
+    /* background-color: #ddd; */
+}
+.title:hover {
+    background-color: white;
+}
+/* global componant */
+
+/* start landing */
+.landing {
+    /* min-height: calc(100vh - 100px); */
+    min-height: calc(100vh - 70px);
+    background-image: url(../Assets/landing_page.jpeg);
+    background-size: cover;
+    position: relative;
+}
+.landing::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 50%;
+}
+.landing .text {
+    position: absolute;
+    z-index: 1;
+    transform: translate(50%, -50%);
+    top: 50%;
+    right: 50%;
+}
+
+.landing .text h1 {
+    color: white;
+    font-size: 60px;
+    font-weight: bolder;
+    text-align: center;
+    transition: 2s;
+}
+.landing .text .random-message {
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 20px;
+    opacity: 0;
+    transform: translateX(-300px);
+    transition: 2s;
+    transition-delay: 1.5s;
+}
+.landing .text .chooses {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transform: translateY(70px);
+    opacity: 0;
+    transition: 3s;
+    transition-delay: 1.5s;
+}
+.landing .text .chooses button {
+    padding: 10px 50px;
+    border-radius: 10px;
+    background: #e5dddd;
+    transition: 0.3s;
+    font-weight: bolder;
+    margin-right: 10px;
+}
+
+.landing .text .chooses button:hover {
+    background-color: white;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.suggestion {
+    margin-top: 100px;
+    text-align: center;
+    transition: 3s;
+    transition-delay: 1.5s;
+    transform: translatex(100px);
+    opacity: 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.landing .text .suggestion p {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 25px;
+}
+.landing .text .suggestion form input[type=number] {
+    border-radius: 5px;
+    padding: 10px;
+}
+.landing .text .suggestion form input[type=number]:focus {
+    outline: none;
+}
+.landing .text .suggestion form input[type=number]::placeholder {
+    font-size: 17px;
+}
+.landing .text .suggestion form button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.landing .text .suggestion form button:hover {
+    cursor: pointer;
+    background-color: white;
+}
+.modal {
+    position: fixed;
+    top: -43px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0); 
+    z-index: 1000;
+    border-radius: 10px;
+    visibility: hidden;
+    transition: 0.5s;
+    opacity: 0;
+}
+.modal p {
+    position: relative;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    transform: translate(50%, -55%);
+    top: 50%;
+    right: 50%;
+    transition: 1s;
+    opacity: 0;
+}
+.modal.show {
+    visibility: visible; /* Show the modal */
+    opacity: 1; /* Fully visible */
+}
+
+.close-btn {
+    position: absolute;
+    right: 0;
+} 
+.close-btn i:hover {
+    color: white;
+}
+.close-btn i {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    margin: 20px 15px;
+}
+/* end landing */
+
+
+/* start questions */
+.question {
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #e5dddd;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 10px 0;
+    box-shadow: 0 0 5px #ddd;
+    min-width: 100px;
+    padding: 40px 0;
+    /* text-align: center; */
+    margin: 30px auto;
+}
+.question .question-title {
+    display: flex;
+    justify-content: space-between;
+    min-width: 50%;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+/* .question .question-text {
+    font-size: 18px;
+    margin: 15px 0;
+    display: none;
+    transition: 0.3s;
+} */
+
+.question .question-text {
+    font-size: 18px;
+    margin: 15px 0;
+    padding-left: 10px;
+    max-height: 0; /* Start fully collapsed */
+    overflow: hidden; /* Hide overflowing content */
+    transition: 0.5s; /* Smooth animation */
+}
+
+/* This targets an element with the class question-text that also has the class active. Both classes */
+.question .question-text.active {
+    max-height: 200px; /* Set a maximum height for expanded content */
+    opacity: 1; /* Fully visible */
+}
+
+.question-btn {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 10px;
+}
+.question-btn:hover {
+    cursor: pointer;
+}
+.question-btn .minus-icon {
+    display: none;
+}
+/* end questions */
+
+/* start best homes */
+.besthomes {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.slider {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.image-holder {
+    margin-bottom: 10px;
+    max-width: 750px;
+}
+.image-holder img {
+    border: 5px solid #ddd;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+.slider button {
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid gray;
+    color: black;
+    transition: 0.3s;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 20px;
+}
+.slider button:hover {
+    background-color: black;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+}
+/* end best homes */
+
+/* start reviews */
+.reviews {
+    padding: 30px 0;
+}
+.box {
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px #ddd;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+.box .person {
+    margin-bottom: 20px;
+}
+.box .person p {
+    font-weight: bold;
+    font-size: 20px;
+}
+.box p {
+    line-height: 1.6;
+}
+.box .person img {
+    margin-bottom: 10px;
+    width: 100px;
+}
+.review {
+    text-align: center;
+    padding: 30px 0;
+}
+.review button {
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid gray;
+    color: black;
+    transition: 0.3s;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 20px;
+    margin-top: 25px;
+}
+.review button:hover {
+    background-color: black;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+}
+/* end reviews */

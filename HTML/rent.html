@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Stata</title>
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="../CSS/header_and_footer.css">
+    <link rel="stylesheet" href="../CSS/rent.css">
+
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- Start Header -->
+    <header class="header">
+        <div class="container">
+            <div>
+                <a href="../HTML/homepage.html">
+                    <img src="../Assets/logo.png" class="logo" alt="Real Stata Logo">
+                    <svg class="svg">
+                        <text class="logo-text" font-size="35" x="5" y="30">Real Estate</text>
+                    </svg>
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="pruduct.html">Favourite Properties</a>
+                <a href="../HTML/login.html">Log in</a>
+                <a href="../HTML/register.html">Register</a>
+            </nav>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Main Content -->
+
+
+    <main>
+        <div class="main-layout">
+            <!-- Main Content -->
+            <div class="main-content">
+                <!-- Filter Section -->
+              
+                <div class="filter-tab">
+
+
+                    <div class="currancy-holder">
+                        <span class="text">Change The currancy To USD:</span>
+                        <span><button class="usd" >USD</button></span>
+                    </div>
+
+                    <div class="text-filter">
+                        <i class="fa-solid fa-filter"></i><span>Filter By Price</span>
+                    </div>
+                   
+                    <select id="priceFilter">
+                        <option value="all">All</option>
+                        <option value="more">More than 2000  EGP</option>
+                        <option value="less">Less than 2000  EGP</option>
+                    </select>
+                    
+                </div>
+                <!-- end filter tab -->
+    
+                <!-- Listings Display -->
+                <div id="rowData">
+                    <!-- Each item will be dynamically populated here -->
+                    <div class="listing-item">
+                        <img class="listing-image" src="" alt="Image" onerror="console.error('Failed to load image')">
+                        <h2>
+                            <i class="fa fa-map-marker-alt"></i> <span class="listing-address"></span>
+                        </h2>
+                        <p class="rent-price"></p>
+                        <p class="description"></p>
+                        <button class="view-more-button"  data-index="[0]">View Details</button>
+                    </div>
+                </div>
+                <div>
+                    <a href="../HTML/addrent.html">
+                        <button class="pop-fly-button">Add Rent</button>
+                    </a>
+                </div>
+                
+                
+                
+            </div>
+    
+            <!-- Sponsor Aside Section -->
+            <aside class="sponsor-aside">
+            
+                <div class="sponsor-content" data-imgs="../Assets/sponsorrent/sponsor1.avif,../Assets/sponsorrent/sponsor2.webp,../Assets/sponsorrent/sponsor3.webp" data-urls="https://www.facebook.com/PalmHillsDevelopments,https://mac-egy.com,https://mac-egy.com">
+                    <img src="../Assets/sponsorrent/sponsor1.avif" alt="Sponsor Logo 1" />
+                    <p>Check out our amazing offers and deals for your dream house!</p>
+                    <a href="https://www.facebook.com/PalmHillsDevelopments">Learn More</a>
+                </div>
+            
+                <div class="sponsor-content" data-imgs="../Assets/sponsorrent/sponsor10.jpg,../Assets/sponsorrent/sponsor11.jpg,../Assets/sponsorrent/sponsor12.jpg" data-urls="https://www.alnahlagroup.com/en/city-stars,https://developers-eg.com">
+                    <img src="../Assets/sponsorrent/sponsor10.jpg" alt="Sponsor Logo 4" />
+                    <p>Your dream home is just a click away. Find it today!</p>
+                    <a href="https://www.alnahlagroup.com/en/city-stars">Learn More</a>
+                </div>
+            
+                <div class="sponsor-content" data-imgs="../Assets/sponsorrent/sponsor4.webp,../Assets/sponsorrent/sponsor5.jpeg,../Assets/sponsorrent/sponsor6.jpeg" data-urls="https://www.facebook.com/Mounirnassifoptician,https://developers-eg.com">
+                    <img src="../Assets/sponsorrent/sponsor4.webp" alt="Sponsor Logo 2" />
+                    <p>Explore luxurious apartments in your area at unbeatable prices!</p>
+                    <a href="https://www.facebook.com/Mounirnassifoptician">Learn More</a>
+                </div>
+            
+                <div class="sponsor-content" data-imgs="../Assets/sponsorrent/sponsor7.webp,../Assets/sponsorrent/sponsor8.webp,../Assets/sponsorrent/sponsor9.webp" data-urls="https://daleli.sa/ar/advertisments/Al_Freeh_Real_Estate_Investment_Office_3703l,https://developers-eg.com">
+                    <img src="../Assets/sponsorrent/sponsor7.webp" alt="Sponsor Logo 3" />
+                    <p>Exclusive deals on properties near you. Don’t miss out!</p>
+                    <a href="https://daleli.sa/ar/advertisments/Al_Freeh_Real_Estate_Investment_Office_3703l">Learn More</a>
+                </div>
+
+                <form id="addSponsorForm" onsubmit="addSponsor(event)">
+                    <h4>Add a Sponsor</h4>
+                    
+                    <label for="imgUpload">Upload Image:</label>
+                    <input type="file" id="imgUpload" name="imgUpload" accept="image/*" required />
+                    
+                    <label for="altText">Alt Text:</label>
+                    <input type="text" id="altText" name="altText" placeholder="Enter alt text" required />
+                    
+                    <label for="desc">Description:</label>
+                    <textarea id="desc" name="desc" placeholder="Enter sponsor description" required></textarea>
+                    
+                    <label for="link">URL:</label>
+                    <input type="url" id="link" name="link" placeholder="Enter sponsor URL" required />
+                    
+                    <button type="submit">Add Sponsor</button>
+                </form>
+                <div id="previewContainer">
+                    <h5>Image Preview:</h5>
+                    <img id="imagePreview" src="" alt="Image Preview" style="max-width: 100%; display: none; border: 1px solid #ddd; padding: 5px;" />
+                </div>
+                
+                
+            </aside>
+
+           
+            
+        </div>
+    </main>
+    
+
+
+
+
+
+
+
+
+
+    <!-- Start Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="left-side-footer">
+                <nav class="footer-links">
+                    <a href="../HTML/aboutus.html">ABOUT US</a>
+                    <a href="../HTML/conectus.html">CONTACT US</a>
+                </nav>
+                <div class="list-countrys">
+                    <label for="country">Country: </label>
+                    <select name="country" id="country">
+                        <option value="Egypt">Egypt</option>
+                        <option value="KSA">Saudi Arabia</option>
+                        <option value="KWD">Kuwait</option>
+                    </select>
+                </div>
+                <span class="copyright">&copy; 2024 realestate.eg</span>
+            </div>
+            <div class="right-side-footer">
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://x.com/"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <br>
+            <button class="go-up"><i class="fa-solid fa-arrow-up"></i></button>
+        </div>
+    </footer>
+
+    <!-- End Footer -->
+    <script src="../Js/rent.js"></script>
+    <script src="../Js/top_up.js"></script>
+</body>
+
+</html>

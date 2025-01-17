@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!-- header and footer style -->
+    <link rel="stylesheet" href="../CSS/header_and_footer.css">
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- homepage style -->
+     <link rel="stylesheet" href="../CSS/homepage.css">
+</head>
+<body id="body">
+    <!-- Start Header -->
+    <header class="header">
+        <div class="container">
+            <div>
+                <a href="../HTML/homepage.html">
+                    <img src="../Assets/logo.png" class="logo" alt="Real Stata Logo">
+                    <svg class="svg">
+                        <text class="logo-text" font-size="35" x="5" y="30">Real Estate</text>
+                    </svg>
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="pruduct.html">Favourite Properties</a>
+                <a href="../HTML/login.html">Log in</a>
+                <a href="../HTML/register.html">Register</a>
+                <a class="darkIcon" href="#"><i class="fa-solid fa-moon"></i></a>
+            </nav>
+        </div>
+    </header>
+    <!-- End Header -->
+    <main>
+        <!-- start landing -->
+        <div class="landing">
+            <div class="container">
+                <div class="text">
+                    <h1 id="page-title"></h1>
+                    <p class="random-message"></p>
+                    <div class="chooses">
+                        <a href="../HTML/rent.html"><button class="rent">Rent</button></a>
+                        <a href="../HTML/buying.html"><button class="buy">Buying</button></a>
+                    </div>
+                    <div class="suggestion">
+                        <p>
+                            Don't know Which One Suits You?
+                            Don't Worry Enter Your Budget And We Will Help You
+                        </p>
+                        <form action="">
+                            <input class="input-budget" type="number" placeholder="Enter Your Budget">
+                            <button class="Recommend-btn">Recommend</button>
+                        </form>
+                    </div>
+                    <div class="modal" id="recommendation-modal">
+                        <span class="close-btn"><i class="fa-solid fa-x icon-close"></i></span>
+                        <p id="modal-message"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end landing -->
+        <!-- start our best options -->
+         <div class="besthomes">
+            <div class="container">
+                <h2 class="title dark">Explore Our Best Houses</h2>
+                <div class="slider">
+                    <div class="image-holder">
+                        <img id="image" src="../Assets/home2.jpg" alt="">
+                        <!-- <img src="/Assets/home3.jpg" alt="">
+                        <img src="/Assets/home4.jpg" alt=""> -->
+                    </div>
+                    <button class="next">next</button>
+                </div>
+            </div>
+         </div>
+        <!-- end our best options -->
+        <!-- start questions -->
+        <div class="questions">
+            <div class="container">
+                <h2 class="title dark">General Questions</h2>
+                <!-- start question 1 -->
+                <article class="question">
+                    <!-- start question title -->
+                    <div class="question-title dark">
+                        <p>Who We Are?</p>
+                        <button class="question-btn">
+                            <span class="plus-icon"><i class="far fa-solid fa-plus"></i></span>
+                            <span class="minus-icon"><i class="far fa-solid fa-minus"></i></span>
+                        </button>
+                    </div>   
+                    <!-- end question title -->
+                    <div class="question-text  dark">
+                        <p>
+                            Lorem ipsum dolor sit, 
+                            amet consectetur adipisicing 
+                            elit. Alias laboriosam distinctio, quos enim itaque 
+                            repellendus!
+                        </p>
+                    </div>
+                </article>
+                <!-- end question 1 -->
+                <!-- start question 2 -->
+                <article class="question">
+                    <!-- start question title -->
+                    <div class="question-title dark">
+                        <p>What We do?</p>
+                        <button class="question-btn">
+                            <span class="plus-icon"><i class="far fa-solid fa-plus"></i></span>
+                            <span class="minus-icon"><i class="far fa-solid fa-minus"></i></span>
+                        </button>
+                    </div>   
+                    <!-- end question title -->
+                    <div class="question-text dark">
+                        <p>
+                            Lorem ipsum dolor sit, 
+                            amet consectetur adipisicing 
+                            elit. Alias laboriosam distinctio, quos enim itaque 
+                            repellendus!
+                        </p>
+                    </div>
+                </article>
+                <!-- end question 2 -->
+                <!-- start question 3 -->
+                <article class="question">
+                    <!-- start question title -->
+                    <div class="question-title dark">
+                        <p>Why We do this?</p>
+                        <button class="question-btn">
+                            <span class="plus-icon"><i class="far fa-solid fa-plus"></i></span>
+                            <span class="minus-icon"><i class="far fa-solid fa-minus"></i></span>
+                        </button>
+                    </div>   
+                    <!-- end question title -->
+                    <div class="question-text dark">
+                        <p>
+                            Lorem ipsum dolor sit, 
+                            amet consectetur adipisicing 
+                            elit. Alias laboriosam distinctio, quos enim itaque 
+                            repellendus!
+                        </p>
+                    </div>
+                </article>
+                <!-- end question 3 -->
+            </div>
+        </div>
+        <!-- end questions -->
+        <!-- start reviews -->
+         <section class="reviews">
+            <h2 class="title dark">Our reviews</h2>
+            <div class="container">
+                <div class="review">
+                    <div class="box">
+                        <div class="person">
+                            <img class="user-review-img" src="../Assets/person1.png" alt="">
+                            <p class="user-name dark">Abdo</p>
+                        </div>
+                        <p class="opinion dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, libero?</p>
+                    </div>
+                    <button class="next-review">Next</button>
+                </div>
+            </div>
+         </section>
+        <!-- end reviews -->
+    </main>
+    <!-- Start Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="left-side-footer">
+                <nav class="footer-links">
+                    <a href="../HTML/aboutus.html">ABOUT US</a>
+                    <a href="../HTML/conectus.html">CONTACT US</a>
+                </nav>
+                <div class="list-countrys">
+                    <label for="country">Country: </label>
+                    <select name="country" id="country">
+                        <option value="Egypt">Egypt</option>
+                        <option value="KSA">Saudi Arabia</option>
+                        <option value="KWD">Kuwait</option>
+                    </select>
+                </div>
+                <span class="copyright">&copy; 2024 realestate.eg</span>
+            </div>
+            <div class="right-side-footer">
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://x.com/"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <br>
+            <button class="go-up"><i class="fa-solid fa-arrow-up"></i></button>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- javaScript files -->
+    <script src="../Js/homepage.js"></script>
+    <script src="../Js/top_up.js"></script>
+</body>
+</html>

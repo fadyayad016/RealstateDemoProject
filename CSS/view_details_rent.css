@@ -1,0 +1,285 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+        /* .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        } */
+
+        /* .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .header img {
+            height: 50px;
+        } */
+
+.main-image {
+    width: 60%;
+    height: 380px;
+    margin-left: 270px;
+}
+
+.details {
+    padding: 20px;
+}
+
+.price {
+    font-size: 24px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.info {
+    margin: 10px 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.feature {
+    background: #eaeaea;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+.contact {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact a {
+    text-decoration: none;
+    color: white;
+    background: grey;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.contact a:hover {
+    background: #0056b3;
+}
+
+.gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.gallery img {
+    height: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.reviews {
+    margin: 20px 0;
+}
+
+.review {
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#reviewInput {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#addReview {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#addReview:hover {
+    background-color: white;
+    color: black;
+}
+
+.similar-properties {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+}
+
+.property-card {
+    min-width: 200px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.property-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.property-card h4 {
+    margin: 10px;
+}
+
+.property-card p {
+    margin: 5px 10px;
+    font-size: 14px;
+    color: #555;
+}
+.contact-info {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    display: flex;
+    gap: 20px;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.whatsapp-btn a {
+    text-decoration: none;
+    color: white;
+    background: #25D366;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.whatsapp-btn a:hover {
+    background: #20b857;
+}
+
+.inquiry-form {
+    margin-top: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.inquiry-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.inquiry-form input, .inquiry-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.inquiry-form button {
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border: 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.inquiry-form button:hover {
+    background-color: white;
+    color: black;
+}
+#maaa{
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+}
+.phone {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+}
+.phone:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+#maaa:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}

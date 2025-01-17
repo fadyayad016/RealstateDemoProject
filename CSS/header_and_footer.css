@@ -1,0 +1,165 @@
+:root {
+    --main-color: #2196f3;
+    --background-color: #ececec;
+    --transition:0.3s;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Cairo" , "san-serif";
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* end global rules */
+
+/* start header */
+.header {
+    background-color: #ececec82;
+    box-shadow: 0 0 10px #ddd;
+    background-image: url("../Assets/footer-background.jpg"); /* مسار الصورة */
+    background-size: cover;
+    height: 70px;
+    overflow: hidden;
+}
+.header .container {
+    background-color: #ececec82;
+    position: relative;
+}
+
+.nav-links {
+    position: absolute;
+    right: 50px;
+    top: 25px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.nav-links a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    transition: var(--transition);
+}
+.nav-links a:hover {
+    color: white;
+    transition: var(--transition);
+}
+.nav-links a:last-of-type {
+    margin-left: 10px;
+}
+.svg  {
+    height: 52px;
+}
+.svg .logo-text {
+    fill: black;
+    transition: var(--transition);
+}
+.svg .logo-text:hover {
+    fill: white;
+    transition: var(--transition);
+}
+/* end header */
+
+/* start Footer */
+.footer {
+    /* background-color: #0e0101; */
+    background-image: url(../Assets/footer-background.jpg);
+    background-size: cover;
+    height: 150px;
+}
+.footer .container {
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.footer .left-side-footer label {
+    color: var(--background-color);
+}
+.left-side-footer {
+    position: absolute;
+}
+.right-side-footer {
+    right: 50px;
+    position: absolute;
+    top: 25px;
+}
+.left-side-footer .footer-links {
+    margin-bottom: 20px;
+}
+.left-side-footer .list-countrys {
+    margin-bottom: 20px;
+}
+.left-side-footer .footer-links a {
+    text-decoration: none;
+    color: var(--background-color);
+    margin-right: 20px;
+    transition: var(--transition);
+    color: #ddd;
+}
+.left-side-footer .footer-links a:hover {
+    color: white;
+    transition: var(--transition);
+}
+.right-side-footer a {
+    text-decoration: none;
+    color: #ddd;
+    margin-right: 10px;
+    background-color: var(--background-color);
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 100%;
+    transition: var(--transition);
+}
+.right-side-footer i {
+    color: black;
+}
+.right-side-footer a:hover {
+    background-color: white;
+    transition: var(--transition);
+}
+.copyright {
+    color: var(--background-color);
+    display: block;
+}
+.go-up {
+    position: absolute;
+    right: 50px;
+    bottom: -90px;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: var(--transition);
+    color: #ddd;
+}
+.go-up i {
+    color: black;
+}
+.go-up:hover {
+    cursor: pointer;
+    background-color: white;
+    transition: var(--transition);
+}
+/* end Footer */

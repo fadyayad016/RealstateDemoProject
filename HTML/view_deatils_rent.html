@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- header and footer style -->
+    <link rel="stylesheet" href="../CSS/header_and_footer.css">
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- view deatails buying stylesheet -->
+     <link rel="stylesheet" href="../CSS/view_details_rent.css">
+    <title>view details rent</title>
+</head>
+<body>
+    <!-- start -->
+    <header class="header">
+        <div class="container">
+            <div>
+                <a href="../HTML/homepage.html">
+                    <img src="../Assets/logo.png" class="logo" alt="Real Stata Logo">
+                    <svg class="svg">
+                        <text class="logo-text" font-size="35" x="5" y="30">Real Estate</text>
+                    </svg>
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="pruduct.html">Favourite Properties</a>
+                <a href="../HTML/login.html">Log in</a>
+                <a href="../HTML/register.html">Register</a>
+            </nav>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- start main  -->
+    <main class="main">
+       <img  class="main-image" src="../Assets/1-9-min.jpg" alt="Main Property">
+       
+        <div class="details">
+            <h2 class="price">EGP 6,300,000</h2>
+            <p class="info">Apartment 115m for sale in Lugar by Gates New Zayed - Prime location with 5% down payment.</p>
+
+            <div class="features">
+                <div class="feature">2 Beds</div>
+                <div class="feature">2 Baths</div>
+                <div class="feature">115 Sq. M</div>
+                <div class="feature">Swimming Pool</div>
+                <div class="feature">Parking Space</div>
+                <div class="feature">24/7 Security</div>
+            </div>
+
+            <h3>Property Features</h3>
+            <p class="info">Located on the Cairo-Alexandria Desert Road, in the heart of New Zayed City, next to De Joya project. Featuring modern architecture, lush green landscapes, and close proximity to major landmarks.</p>
+
+            <div class="gallery" id="gallery">
+                <img src="../Assets/mabna1.jpg" alt="Gallery Image 1">
+                <img src="../Assets/mabna2.jpg" alt="Gallery Image 2">
+                <img src="../Assets/mabnnnn.jpg" alt="Gallery Image 3">
+                <img src="../Assets/Modern Apartment in New Cairo.jpg" alt="Gallery Image 4">
+                <img src="../Assets/Beautiful Villa in Sheikh Zayed.jpg" alt="Gallery Image 5">
+            </div>
+            
+
+            <div class="modal" id="modal">
+                <span class="modal-close" id="modalClose">&times;</span>
+                <img id="modalImage" src="" alt="Modal Image">
+            </div>
+
+            <h3>Reviews</h3>
+            <div class="reviews" id="reviews"></div>
+            <textarea id="reviewInput" placeholder="Write a review..."></textarea>
+            <button id="addReview">Add Review</button>
+
+            <h3>Similar Properties</h3>
+            <div class="similar-properties" id="similarProperties"></div>
+        </div>
+    </div>
+    <h3>Contact Information</h3>
+    <div class="contact-info">
+        <p class="phone"><strong>Phone:</strong> <a href="fas fa-phone">+201122397307</a></p>
+        <button id="maaa" class="fab fa-whatsapp">
+            <a href="https://wa.me/201234567890" target="_blank">Contact via WhatsApp</a>
+        </button>   
+    </div>
+
+    <h3>contact Form</h3>
+    <form class="inquiry-form">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="message">Your Message</label>
+        <textarea id="message" placeholder="Write your message here" required></textarea>
+
+        <button type="submit">Send Inquiry</button>
+    </form>
+
+    </main>
+    <!-- end main -->
+
+    <!-- Start Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="left-side-footer">
+                <nav class="footer-links">
+                    <a href="../HTML/aboutus.html">ABOUT US</a>
+                    <a href="../HTML/conectus.html">CONTACT US</a>
+                </nav>
+                <div class="list-countrys">
+                    <label for="country">Country: </label>
+                    <select name="country" id="country">
+                        <option value="Egypt">Egypt</option>
+                        <option value="KSA">Saudi Arabia</option>
+                        <option value="KWD">Kuwait</option>
+                    </select>
+                </div>
+                <span class="copyright">&copy; 2024 realestate.eg</span>
+            </div>
+            <div class="right-side-footer">
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://x.com/"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <br>
+            <button class="go-up"><i class="fa-solid fa-arrow-up"></i></button>
+        </div>
+    </footer>
+    <!-- End Footer -->
+     <script src="../Js/details_rent.js"></script>
+     <script src="../Js/top_up.js"></script>
+</body>
+</html>

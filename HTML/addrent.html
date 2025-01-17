@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- header and footer style -->
+    <link rel="stylesheet" href="../CSS/header_and_footer.css">
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- view deatails buying stylesheet -->
+     <link rel="stylesheet" href="../CSS/view_details_rent.css">
+     <link rel="stylesheet" href="../CSS/addrent.css">
+    <title>view details rent</title>
+</head>
+<body>
+    <!-- start -->
+    <header class="header">
+        <div class="container">
+            <div>
+                <a href="../HTML/homepage.html">
+                    <img src="../Assets/logo.png" class="logo" alt="Real Stata Logo">
+                    <svg class="svg">
+                        <text class="logo-text" font-size="35" x="5" y="30">Real Estate</text>
+                    </svg>
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="pruduct.html">service products</a>
+                <a href="../HTML/login.html">Log in</a>
+                <a href="../HTML/register.html">Register</a>
+                <a class="darkIcon" href="#"><i class="fa-solid fa-moon"></i></a>
+            </nav>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- start main -->
+    <main class="main">
+        <h2>Rent Form</h2>
+        
+        <!-- Rent Form -->
+        <form id="rentForm" enctype="multipart/form-data">
+            <div>
+                <label for="rentImage">Property Image:</label>
+                <input type="file" id="rentImage" name="rentImage" accept="image/*" required onchange="previewImage(event)">
+                <div id="imagePreviewContainer">
+                    <!-- Image preview will be displayed here -->
+                </div>
+            </div>
+            <div>
+                <label for="tenantName">Tenant Name:</label>
+                <input type="text" id="tenantName" name="tenantName" required>
+            </div>
+            <div>
+                <label for="propertyAddress">Property Address:</label>
+                <input type="text" id="propertyAddress" name="propertyAddress" required>
+            </div>
+            
+            <div>
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+            </div>
+            <div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </form>
+
+    </main>
+    <!-- end main -->
+
+    <!-- Start Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="left-side-footer">
+                <nav class="footer-links">
+                    <a href="../HTML/aboutus.html">ABOUT US</a>
+                    <a href="../HTML/conectus.html">CONTACT US</a>
+                </nav>
+                <div class="list-countrys">
+                    <label for="country">Country: </label>
+                    <select name="country" id="country">
+                        <option value="Egypt">Egypt</option>
+                        <option value="KSA">Saudi Arabia</option>
+                        <option value="KWD">Kuwait</option>
+                    </select>
+                </div>
+                <span class="copyright">&copy; 2024 realestate.eg</span>
+            </div>
+            <div class="right-side-footer">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <br>
+            <button class="go-up"><i class="fa-solid fa-arrow-up"></i></button>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    <script src="../Js/addrent.js"></script>
+    <script src="../Js/top_up.js"></script>
+</body> 
+</html>

@@ -1,0 +1,53 @@
+.contact-us {
+    min-height: calc(100vh - 70px);
+}
+
+.title {
+    text-align: center;
+}
+.conactBox{
+    width: 100px;
+    height: 100px;
+    /* position: absolute; */
+    width: 447px;
+    height: 509px;
+    border-top: 6px solid black;
+    /* top: 549px;
+    left: 569px; */
+    margin: 0 auto;
+}
+input{
+    display: flex;
+        width: 320px;
+        left: 12px;
+        position: relative;
+        padding: 19px;
+        margin: 39px;
+    
+}
+#datatextZone{
+    display: flex;
+        width: 320px;
+        left: 12px;
+        position: relative;
+        padding: 19px;
+        margin: 39px;
+        resize: none;
+        height: 99px;
+
+}
+#btn {
+    width: 188px;
+    position: relative;
+    left: 103px;
+    height: 64px;
+    background-color: white;
+    border: none;
+    background: lightgrey;
+    cursor: pointer;
+}
+#btn:hover{
+    background-color: brown;
+}
+
+/* end contactus */

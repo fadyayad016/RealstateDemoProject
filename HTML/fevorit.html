@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fevorite</title>
+    <link rel="stylesheet" href="../CSS/product.css">
+    <link rel="stylesheet" href="../CSS/header_and_footer.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <!-- homepage style -->
+    <link rel="stylesheet" href="../CSS/homepage.css">
+    <link rel="stylesheet" href="../CSS/fevorite.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div>
+                <a href="../HTML/homepage.html">
+                    <img src="../Assets/logo.png" class="logo" alt="Real Stata Logo">
+                    <svg class="svg">
+  
+                        <text class="logo-text" font-size="35" x="5" y="30">Real Estate</text>
+                    </svg>
+                </a>
+            </div>
+            <nav class="nav-links">
+                  <a href="../HTML/pruduct.html"> Favourite Properties</a>
+                  <a href="../HTML/fevorit.html">My Favourite</a>
+                  <a href="../HTML/login.html">login</a>
+            </nav>
+        </div>
+    </header>
+     <main class="main-content">
+        <section class="content">
+        <div class="filter-tab">
+            <div class="currency-holder">
+              <span class="text">Change The Currency To USD:</span>
+              <button class="usd">USD</button>
+            </div>
+            
+            <div class="text-filter">
+              <i class="fa-solid fa-filter"></i><span>Filter By Price</span>
+            </div>
+            <select id="priceFilter" onchange="filterByPrice()">
+              <option value="all">All</option>
+              <option value="more-1">More than 1 million EGP</option>
+              <option value="less-1">Less than 1 million EGP</option>
+            </select>
+            
+          </div>
+    
+    <div id="gridContainer"></div>
+    </section>
+    <aside class="ads-section">
+        <h2>Advertisements</h2>
+        <br>
+        <div class="ad">
+          <video controls>
+          <source src="https://videocdn.cdnpk.net/videos/402f5d7d-1f88-45bf-8f2f-907b0aa94311/horizontal/previews/watermarked/large.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            
+    </video>
+  
+        </div>
+        <h3>    Watch our latest real estate offers!</h3>
+    <br>
+  
+        <div class="ad">
+          <video controls>
+            <source src="https://videocdn.cdnpk.net/videos/f72028ea-ed08-4fc3-8472-b75e660c5a2a/horizontal/previews/watermarked/large.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>        
+  
+        </div>
+        <h3>   Special offer on real estate properties! Check now.<h3>
+  
+      </aside>
+    </main>
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="left-side-footer">
+                <nav class="footer-links">
+                    <a href="../HTML/aboutus.html">ABOUT US</a>
+                    <a href="../HTML/conectus.html">CONTACT US</a>
+                </nav>
+                <div class="list-countrys">
+                    <label for="country">country: </label>
+                    <select name="country" id="country">
+                        <option value="Egypt">Egypt</option>
+                        <option value="KSA">Saudi arabia</option>
+                        <option value="KWD">kuwait</option>
+                    </select>
+                </div>
+                <span class="copyright">&copy; 2024 real realestate.eg</span>
+            </div>
+            <div class="right-side-footer">
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://x.com/"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <button class="go-up"><i class="fa-solid fa-arrow-up"></i></button>
+        </div>
+     </footer>
+    <script src="../Js/favourite.js"></script>
+    <script src="../Js/top_up.js"></script>
+</body>
+</html>

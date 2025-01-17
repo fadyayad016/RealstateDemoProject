@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Container for the About Section */
+.container-about {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto; /* edited by abdo tharwat */
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Headings Styling */
+.container-about h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.container-about h3 {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+/* Paragraphs Styling */
+.container-about p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Highlighted Text */
+.container-about i {
+    color: #000;
+    font-style: normal;
+    font-weight: bold;
+}
+
+/* Image Styling */
+.container-about .img-contain {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Columns Styling */
+.columns1 {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Left Column */
+.columns1 div:first-child {
+    flex: 1;
+}
+
+.columns1 .build {
+    width: 400px;
+    height: 400px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px; /* edit by abdo tharwat */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* edit by abdo tharwat */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .columns1 {
+        flex-direction: column;
+    }
+
+    .container-about h1 {
+        font-size: 2rem;
+    }
+
+    .container-about h3 {
+        font-size: 1.2rem;
+    }
+}
+
+.columns1 {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+}
+
+.columns1 div {
+    flex: 1;
+}
+
+@media (min-width: 768px) {
+    .columns1 {
+        flex-direction: column;
+    }
+}
+
+/* لجعل المقالات تظهر جنبًا إلى جنب */
+.grid-2-articles {
+    margin: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap; /* تفعيل التداخل في الأجهزة الصغيرة */
+}
+
+/* لجعل المقالات تأخذ نفس العرض */
+.lg-w450 {
+    width: 40%;
+}
+
+/* لتحديد خصائص الصورة */
+.img-contain {
+    margin: 10px;
+    width: 100%;
+    height: auto;
+}
+
+/* لتنسيق النصوص بشكل جيد */
+p, ul {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* لجعل النصوص والصور في المقال الأول تظهر جنبًا إلى جنب */
+.columns1 {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.articl2{
+    margin-left: 30px;
+}
+.values{
+    padding-top: 5px; /* edit by abdo tharwat */
+    margin-top: 100px;
+    position: relative;
+    width: 100%;
+    background-color: rgb(190, 188, 188);
+    
+}
+/* edit by abdo tharwat */
+.values .text {      
+    padding: 20px;
+}
+
+.values h1 {
+    text-align: center;
+}
+
+/* edit by abdo tharwat */
+.values img {
+    width: auto;
+    height: 180px;
+    /* display: flex
+; */
+    /* flex-direction: column; */
+    /* display: inline; */
+    /* justify-content: space-between; */
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+/* edited by abdo tharwat */
+.values img:hover {
+    cursor: pointer;
+    transition: var(--transition);
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgb(0 0 0 / 40%);
+}
+/* edit by abdo tharwat */
+.valueimg {
+    display: flex;
+    justify-content: space-around;
+}
+
+#img2{
+    margin-left: 20px;
+}
+
+
+
+
+
+
+/* لجعل المقالات تأخذ عرض مناسب في الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .columns1 {
+        flex-direction: column;
+    }
+
+    .lg-w450 {
+        width: 100%; /* جعل المقالات تأخذ كامل العرض في الأجهزة الصغيرة */
+    }
+}

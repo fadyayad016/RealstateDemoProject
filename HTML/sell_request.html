@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- header and footer stylesheet -->
+    <link rel="stylesheet" href="../CSS/header_and_footer.css">
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- selling stylesheet -->
+    <link rel="stylesheet" href="../CSS/selling.css">
+    <title>Selling</title>
+</head>
+<body>
+    <!-- Start Header -->
+    <header class="header">
+        <div class="container">
+            <div>
+                <a href="homepage.html">
+                    <img src="../Assets/logo.png" class="logo" alt="Real Stata Logo">
+                    <svg class="svg">
+                        <text class="logo-text" font-size="35" x="5" y="30">Real Estate</text>
+                    </svg>
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="../HTML/login.html">Log in</a>
+                <a href="../HTML/register.html">Register</a>
+            </nav>
+        </div>
+    </header>
+    <!-- end header -->
+    <main>
+        <div class="page">
+            <!-- start success modal -->
+            <p class="form-submited">
+                <i class="fa-solid fa-circle-check"></i>you send your rquest successfully we will review it and replay within 48h
+            <p>
+            <!-- end success modal -->
+            <div class="container">
+                <h2>Send Sell request</h2>
+                <form id="sellForm" action="#">
+                    <!-- start input -->
+                    <div class="input-holder">
+                        <label for="firstName">First Name:</label>
+                        <input title="First name must only contain letters." class="text"  type="text" name="firstName" id="firstName" placeholder="First Name">    
+                        <p class="error-message"></p>
+                    </div>
+                    <!-- end input -->
+                    <!-- start input -->
+                    <div class="input-holder">
+                        <label for="LastName">LastName:</label>
+                        <input class="text" type="text" name="LastName" id="LastName" placeholder="Last Name">
+                        <p class="error-message"></p>
+                    </div>
+                    <!-- end input -->
+                    <!-- start input -->
+                    <div class="input-holder">
+                        <label for="address">Address Of Building:</label>
+                        <input class="text" type="text" name="address" id="address" placeholder="Address of building">    
+                        <p class="error-message"></p>
+                    </div>
+                    <!-- end input -->
+                    <!-- start input -->
+                    <div class="input-holder">
+                        <label for="email">Your Email:</label>
+                        <input class="text" type="email" name="email" id="email" placeholder="Email">
+                        <p class="error-message"></p>
+                    </div>
+                    <!-- end input --> 
+                    <!-- start input -->
+                    <div class="input-holder">                        
+                        <label for="phone">Phone:</label>
+                        <input type="text" name="phone" id="phone" placeholder="Phone">
+                        <p class="error-message"></p>
+                    </div>
+                    <!-- end input --> 
+                    <!-- start input -->
+                    <div class="input-holder">
+                        <label for="price">Your Price:</label>
+                        <input class="text" type="number" name="price" id="price" placeholder="Your Price">
+                        <p class="error-message"></p>
+                    </div>
+                    <!-- end input -->
+                    <!-- start input -->
+                    <div class="input-holder">
+                        <label for="image">upload house image:</label>
+                        <input type="file" name="image" id="image" accept="image/*" placeholder="Your image">
+                        <p class="error-message"></p>
+                    </div>
+                    <!-- end input -->
+                    <!-- start input -->
+                    <div class="input-holder">
+                        <label for="details">Write Details About Your Home:</label>
+                        <textarea name="details" id="details" rows="20" cols="60"placeholder="Please provide detailed information about your property including number of bedrooms, bathrooms, square footage, amenities, and any special features..."></textarea>
+                        <p class="error-message"></p>
+                    </div>
+                    <!-- end input -->
+                    <input type="submit" name="submit" id="submit" value="Send your request">
+                </form>
+            </div>
+        </div>
+    </main>
+    <!-- start footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="left-side-footer">
+                <nav class="footer-links">
+                    <a href="../HTML/aboutus.html">ABOUT US</a>
+                    <a href="../HTML/conectus.html">CONTACT US</a>
+                </nav>
+                <div class="list-countrys">
+                    <label for="country">Country: </label>
+                    <select name="country" id="country">
+                        <option value="Egypt">Egypt</option>
+                        <option value="KSA">Saudi Arabia</option>
+                        <option value="KWD">Kuwait</option>
+                    </select>
+                </div>
+                <span class="copyright">&copy; 2024 realestate.eg</span>
+            </div>
+            <div class="right-side-footer">
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://x.com/"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <br>
+            <button class="go-up"><i class="fa-solid fa-arrow-up"></i></button>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    <script src="../Js/request_sell.js"></script>
+    <script src="../Js/top_up.js"></script>
+</body>
+</html>

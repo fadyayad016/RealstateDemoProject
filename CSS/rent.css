@@ -1,0 +1,407 @@
+/* Main layout container */
+main {
+    display: flex;
+    flex-direction: column; /* Stack filter and content vertically */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.main-layout {
+    display: flex;
+    gap: 20px; /* Space between main content and aside */
+    flex-wrap: nowrap; /* Prevent wrapping to keep aside next to the content */
+    justify-content: space-between; /* Distribute space between main content and aside */
+    align-items: flex-start; /* Align items at the top */
+}
+.filter-tab {
+    width: 100%;
+justify-content: center;
+align-items: center;
+    display: flex;
+    gap: 10px;
+    left: 300px;
+}
+
+
+.currancy-holder {
+    justify-content: center;
+    align-items: center;
+        display: flex;
+        gap: 10px;
+        margin-right: 200px;
+    }
+
+    .currancy-holder .text {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        gap: 10px;
+        font-size: 18px;
+    }
+    
+    .currancy-holder .usd {
+        color: inherit; /* Remove color from the button */
+        border: 1px solid #000; /* Add a black border to the button */
+        background-color: transparent; /* Make the background transparent */
+        padding: 5px 10px; /* Optional: adjust padding to style the button */
+        cursor: pointer; /* Change the cursor to indicate it's clickable */
+        border-radius: 5px;
+        font-weight: bold; /* Make the button text bold */
+    }
+    .currancy-holder .egp {
+        color: inherit; /* Remove color from the button */
+        border: 1px solid #000; /* Add a black border to the button */
+        background-color: transparent; /* Make the background transparent */
+        padding: 5px 10px; /* Optional: adjust padding to style the button */
+        cursor: pointer; /* Change the cursor to indicate it's clickable */
+        border-radius: 5px;
+        font-weight: bold; /* Make the button text bold */
+    }
+    
+    
+
+.filter-tab select {
+    font-size: 18px;
+    padding: 5px; /* Consolidated padding */
+    background-color: #fff;
+    border: 1px solid black; /* Explicit border style */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter-tab .text-filter {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.filter-tab .text-filter i {
+    margin-right: 10px;
+}
+
+
+/* Initial button style */
+.pop-fly-button {
+    background-color: black; /* Button color */
+    color: white; /* Text color */
+    border: none;
+    padding: 20px; /* Increase padding to make the button more circular */
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 1; /* Ensure text is visible from the start */
+    transform: scale(0.5) translateY(50px); /* Start small and below the normal position */
+    animation: popFly 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards; /* Apply the pop fly animation */
+    position: fixed; /* Fix the button position */
+    bottom: 5%; /* Keep it at the bottom */
+    right: 20px; /* Keep it on the right side */
+    z-index: 1000; /* Ensure it's on top of other content */
+    border-radius: 50%; /* Make the button circular */
+    width: 60px; /* Set the width */
+    height: 60px; /* Set the height */
+    display: flex; /* Flexbox to center text */
+    align-items: center; /* Vertically center text */
+    justify-content: center; /* Horizontally center text */
+    text-align: center;
+}
+
+
+/* Hover effect */
+.pop-fly-button:hover {
+    background-color: white; /* Change the background to a darker color on hover */
+    transform: scale(1.1); /* Slightly grow on hover */
+    color: #000;
+    border: #000 solid;
+}
+
+/* Animation for "pop fly" */
+@keyframes popFly {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translateY(50px); /* Start small and below */
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2) translateY(-20px); /* Scale up a bit and go above */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0); /* Final position at normal size */
+    }
+}
+
+
+
+
+
+
+
+/* Main content layout */
+.main-content {
+    display: flex;
+    flex: 1; /* Take up remaining space */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: space-between; /* Distribute items evenly */
+    gap: 20px;
+    width: calc(100% - 320px); /* Adjust width to account for sponsor aside */
+}
+
+/* Container to display items dynamically */
+#rowData {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; 
+    width: 100%;
+    gap: 20px;
+}
+
+/* Listing item styles */
+.listing-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 16px 0; /* Vertical spacing between rows */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease;
+    width: calc(33.33% - 20px); /* Three items per row with spacing */
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.listing-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.listing-item h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.listing-item p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.listing-item .rent-price {
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.listing-item .description {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 8px;
+    white-space: nowrap; /* Prevents text from wrapping to a new line */
+    overflow: hidden;    /* Hides the overflow if the text exceeds the container width */
+    text-overflow: ellipsis;
+}
+
+.listing-item button {
+    padding: 10px 16px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.listing-item button:hover {
+    background-color: white;
+    color: black;
+}
+
+.listing-item:hover {
+    transform: scale(1.05);
+}
+
+/* Sponsor Aside */
+.sponsor-aside {
+    flex-shrink: 0; /* Prevent shrinking */
+    width: 300px; /* Fixed width for aside */
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.sponsor-aside h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.sponsor-content {
+    text-align: center;
+}
+
+.sponsor-content img {
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.sponsor-content p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 16px;
+}
+
+.sponsor-content button {
+    padding: 10px 16px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.sponsor-content button:hover {
+    background-color: white;
+    color: black;
+}
+
+
+
+.sponsor-aside {
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.sponsor-aside h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+#addSponsorForm {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#addSponsorForm h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+#addSponsorForm label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+#addSponsorForm input,
+#addSponsorForm textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+#addSponsorForm button {
+    background-color: black;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#addSponsorForm button:hover {
+    background-color: white;
+    color: #000;
+}
+
+.sponsor-content {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.sponsor-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.sponsor-content p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.sponsor-content a {
+    font-size: 0.9rem;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.sponsor-content a:hover {
+    text-decoration: underline;
+}
+
+
+/* Responsive design: Adjust for smaller screens */
+@media (max-width: 768px) {
+    .main-layout {
+        flex-direction: column;
+    }
+
+    .main-content {
+        flex-direction: column; /* Stack items vertically on small screens */
+        width: 100%;
+    }
+
+    .listing-item {
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .sponsor-aside {
+        width: 100%;
+        margin-top: 20px; /* Add spacing on smaller screens */
+    }
+}
+
+@media (min-width: 769px) {
+    .listing-item {
+        width: calc(33.33% - 20px); /* Ensures 3 items per row */
+    }
+}

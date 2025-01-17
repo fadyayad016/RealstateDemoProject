@@ -1,0 +1,229 @@
+body,html {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  grid-template-rows: 1fr auto; /*  المحتوى يملأ المساحة المتاحة بينما يكون الفوتر في الأسفل */
+
+}
+main {
+  flex-grow: 1; /* يسمح للمحتوى بالتوسع ليشغل المساحة المتاحة */
+  margin-bottom: 200px;
+}
+
+.header {
+  background-color: #ececec82;
+  box-shadow: 0 0 10px #ddd;
+  background-image: url("../Assets/footer-background.jpg"); /* مسار الصورة */
+  background-size: cover;
+  height: 70px;
+  overflow: hidden;
+}
+.header .container {
+  background-color: #ececec82;
+  position: relative;
+}
+.content {
+  flex: 3; /* يأخذ معظم المساحة */
+}
+/* تنسيق الفلتر */
+.filter-tab {
+  display: flex;
+  gap: 10px;
+  position: relative;
+  width: fit-content;
+  left: 20px;
+  margin: 10px 0;
+  
+}
+.filter-tab select {
+  font-size: 18px;
+  background-color: #ddd;
+  border-radius: 5px;
+  border: navajowhite;
+  padding: 5px;
+  cursor: pointer;
+}
+.filter-tab .text-filter {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap:10px;
+}
+.filter-tab .text-filter i {
+  margin-left: 300px;
+  padding-left: 20px;
+
+}
+/* تحسين تنسيق الـ grid */
+.grid-container {
+ display: grid;
+  grid-template-columns: repeat(3, 1fr); /* ثلاث أعمدة متساوية */
+  gap: 8px; /* المسافة بين العناصر */
+  margin-top: 20px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* تنسيق بطاقات المنتجات */
+.product-card {
+  width:100%;
+  height: 530px;;
+  border: 1px solid #ddd;
+  border-radius: 10px; /* تحسين الحواف لتكون دائرية */
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px); /* رفع البطاقة عند المرور عليها */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* إضافة تأثير الظل عند المرور */
+  opacity: 0.9; /* تقليل الشفافية عند التفاعل */
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover; /* تكبير الصورة بشكل جميل داخل الحاوية */
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333; /* اللون الداكن للنص */
+}
+
+.product-card p {
+  margin: 5px 0;
+  color: #000000;
+  font-weight: bolder; /* لتفريق النص عن العناوين */
+  font-size: larger;
+}
+.product-card h5 {
+  margin: 5px 0;
+  color: #000000;
+  font-size:16px;
+}
+
+/* تحسين حاوية العملة */
+.currancy-holder {
+  display: inline-block;
+  gap: 10px;
+  position: relative;
+  width: fit-content;
+  margin:  0;
+}
+
+.text {
+  font-size: 20px;
+  margin-left: 25px;
+  margin-bottom: 10px;
+
+}
+text.logo-text:hover{
+  color: #2196f3;
+
+}
+
+.usd {
+  padding: 6px;
+  border: none;
+  background: #ddd;
+  border-radius: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+
+/* تنسيق زر المفضلة */
+.favorite-btn {
+  background-color: #000000;
+  color: white;
+  border: none;
+  width: 150px;
+  height: 50px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.favorite-btn.favorite {
+  background-color: #282727; /* لون عند إضافة المفضلة */
+}
+
+
+footer {
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 100px;
+
+}
+
+/*     aside   */
+/* التخطيط الرئيسي */
+.main-content {
+  display: flex;
+  gap: 8px; /* مسافة بين المنتجات والإعلانات */
+  padding: 20px;
+}
+
+/* المحتوى الرئيسي */
+.content {
+  flex: 3; /* يأخذ معظم المساحة */
+}
+/* قسم الإعلانات */
+.ads-section {
+  flex: 1; /* يأخذ مساحة أصغر */
+  background-color: #f9f9f9;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width:350px;
+}
+
+.ads-section h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+.ad {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.ad img {
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.ad p {
+  font-size: 14px;
+  color: #555;
+}
+
+
+video{
+  width: 100%;
+  height: auto;
+}
+
+p{
+  color: #000000;
+  font-weight: bolder;
+}

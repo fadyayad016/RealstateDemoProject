@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Stata</title>
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="../CSS/header_and_footer.css">
+    <link rel="stylesheet" href="../CSS/aboutus.css">
+    <link rel="stylesheet" href="../CSS/register.css">
+
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+   <!-- Start Header -->
+<header class="header">
+    <div class="container">
+        <div>
+            <a href="../HTML/homepage.html">
+                <img src="../Assets/logo.png" class="logo" alt="Real Estate Logo">
+                <svg class="svg">
+                    <text class="logo-text" font-size="35" x="5" y="30">Real Estate</text>
+                </svg>
+            </a>
+        </div>
+        <nav class="nav-links">
+
+            <a href="../HTML/login.html" id="loginLink"><i class="fa-solid fa-sign-in"></i> Log In</a>
+            <span id="userProfile" style="display: none; font-weight: bold; margin-left: 20px;"></span>
+        </nav>
+    </div>
+</header>
+<!-- End Header -->
+
+<!-- Main Content -->
+<main class="center-container">
+    <form id="registrationForm" class="form-container">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username">
+            <span id="usernameError" class="error-message">Invalid username.</span>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address">
+            <span id="emailError" class="error-message">Invalid email format.</span>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Create a password">
+            <span id="passwordError" class="error-message">Password must be at least 8 characters, including a number, letter, and special character.</span>
+        </div>
+
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password">
+            <span id="confirmPasswordError" class="error-message">Passwords do not match.</span>
+        </div>
+
+        <div class="form-group checkbox-container">
+            <label for="registerMe">Register me</label>
+            <input type="checkbox" id="registerMe">
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="submit-button">Register</button>
+        </div>
+    </form>
+</main>
+
+    
+    
+    
+    
+    
+
+    <!-- Start Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="left-side-footer">
+                <nav class="footer-links">
+                    <a href="#">ABOUT US</a>
+                    <a href="#">CONTACT US</a>
+                </nav>
+                <div class="list-countrys">
+                    <label for="country">Country: </label>
+                    <select name="country" id="country">
+                        <option value="Egypt">Egypt</option>
+                        <option value="KSA">Saudi Arabia</option>
+                        <option value="KWD">Kuwait</option>
+                    </select>
+                </div>
+                <span class="copyright">&copy; 2024 realestate.eg</span>
+            </div>
+            <div class="right-side-footer">
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://x.com/"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <br>
+            <button class="go-up"><i class="fa-solid fa-arrow-up"></i></button>
+        </div>
+    </footer>
+
+    <!-- End Footer -->
+     <script src="../Js/register.js"></script>
+     <script src="../Js/top_up.js"></script>
+</body>
+
+</html>

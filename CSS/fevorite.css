@@ -1,0 +1,55 @@
+.product-card {
+    width:100%;
+    height: 500px;;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* تحسين الحواف لتكون دائرية */
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+#gridContainer {
+    display: grid;
+  grid-template-columns: repeat(3, 1fr); /* ثلاث أعمدة متساوية */
+  gap: 8px; /* المسافة بين العناصر */
+  margin-top: 20px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+    
+}
+
+.no-favorites {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    color: gray;
+    margin-top: 50px;    
+}
+
+.favorite-btn {
+    background-color: #000000;
+    color: white;
+    border: none;
+    width: 150px;
+    height: 50px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.favorite-btn.favorite {
+background-color: #474747; /* لون عند إضافة المفضلة */
+}
+  
+.main-content {
+    display: flex;
+    gap: 8px; /* مسافة بين المنتجات والإعلانات */
+    padding: 20px;
+  }
+  
+.content {
+flex: 3; /* يأخذ معظم المساحة */
+}

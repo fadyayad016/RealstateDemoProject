@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font awesome libiray -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- style sheet -->
+    <link rel="stylesheet" href="../CSS/conect.css">
+    <!-- test -->
+     <link rel="stylesheet" href="../CSS/header_and_footer.css">
+    <title>contact us</title>
+</head>
+<body>
+    <!-- start header -->
+     <header class="header">
+        <div class="container">
+            <div>
+                <a href="../HTML/homepage.html"><img src="../Assets/logo.png" class="logo" alt="">
+                    <svg class="svg">
+                        <text class="logo-text" font-size="35" x="5" y="30">Real Estate</text>
+                    </svg>
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="../HTML/pruduct.html">Favourite properties</a>
+                <a href="../HTML/login.html">login</a>
+            </nav>
+        </div>
+    </header>
+    <!-- end header -->
+     <main>
+        <!-- <div class="div-iframe">
+        <iframe src="https://labs.mapbox.com/contribute/#/?owner=mapbox&id=streets-v11&access_token=pk.eyJ1IjoiZGV2emFtZWVuIiwiYSI6ImNsaDBpdGdiZjB1MDIzbHBlMWQwZWtoZzEifQ.JjkXW2izdzrTLf3YHSt4ng&utm_source=https%3A%2F%2Fwww.bayut.eg%2F&utm_medium=attribution_link&utm_campaign=referrer&q=&l=14%2F27.1877%2F31.1693" frameborder="0"></iframe>
+        </div>  -->
+        <div class="contact-us">
+            <div class="container">
+                <h2 class="title">contact-us</h2>
+                <form action="" class="conactBox" id="conectform">
+                    <input type="text" name="btn" id="dataname" placeholder="Enter Your name" required>
+                    <input type="email" name="" id="dataemaill" placeholder="Enter Your Email" required>
+                    <input type="number" name="" id="datanumper" placeholder="Enter Your number" required pattern="/^[0-9]{10,15}$/">
+                    <input type="text" name="" id="dataadress" placeholder="message adress" required>
+                    <textarea name="" id="datatextZone" placeholder="message Text" required></textarea>
+                    <button id="btn" onclick="collectData()" type="submit">Send You Message</button>
+                    <a href="#" class="fa"><i class="fa-brands fa-facebook"></i></a>
+                 </form>
+            </div>
+        </div>
+     </main>
+     <!-- start footer -->
+     <footer class="footer">
+        <div class="container">
+            <div class="left-side-footer">
+                <nav class="footer-links">
+                    <a href="../HTML/aboutus.html">ABOUT US</a>
+                    <a href="../HTML/conectus.html">CONTACT US</a>
+                </nav>
+                <div class="list-countrys">
+                    <label for="country">country: </label>
+                    <select name="country" id="country">
+                        <option value="Egypt">Egypt</option>
+                        <option value="KSA">Saudi arabia</option>
+                        <option value="KWD">kuwait</option>
+                    </select>
+                </div>
+                <span class="copyright">&copy; 2024 real realestate.eg</span>
+            </div>
+            <div class="right-side-footer">
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://x.com/"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <button class="go-up"><i class="fa-solid fa-arrow-up"></i></button>
+        </div>
+     </footer>
+     <!-- end footer -->
+     <script src="../Js/top_up.js"></script>
+      <script src="../Js/conect.js" ></script>
+</body>
+</html>
